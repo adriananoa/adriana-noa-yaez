@@ -1,0 +1,155 @@
+#contenedor{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template:
+    "redes" 50px
+    "menu" 70px
+    "banner" 800px
+    "bienvenida" auto
+    "ofrecemos" auto
+    "accion" auto
+    "productos" auto
+    "teem" auto
+    "pie" auto/1fr;
+}
+#datos{
+    grid-area: redes;
+    background-color: rgb(11, 58, 66);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#dir{
+    width: 60%;
+}
+#dir p{
+    color: #ccc;
+}
+#redes{
+    width: 30%; 
+    display: flex;
+    justify-content: space-evenly;
+}
+#redes span{
+    color: #ccc;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#redes span:hover{
+    filter: drop-shadow(0 0 10px #f2a65a) drop-shadow(0 0 20px #f2a65a);
+    color: rgb(242, 166, 90);
+}
+#cabecera{
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    width: 80px;
+    margin-left: 10px;
+}
+#check:checked ~.menu{
+    left: 0;
+}
+#check{
+    display: none;
+}
+.icon-menu{
+    color: rgb(20, 101, 117);
+    font-size: 2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.icon-menu:hover{
+    color: rgb(11, 58, 66);
+}
+.menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 70px;
+    left:-100%;
+    background-color: rgba(11,58,66, .96);
+    transition: 1s ease;
+    z-index: 12;
+}
+.menu li{
+    width: 100%;
+    border-bottom:1px solid rgba(255, 255, 255, .2);
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    display: block;
+    line-height: 9.5;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.menu li a.active,li a:hover{
+    background-color: rgb(20, 101, 117);
+    color: white;
+}
+#banner{
+    grid-area: banner;
+    overflow: hidden;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 80px;
+}
+.contenido-slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink:0;
+}
+.contenido-slider h2{
+    color: rgb(242, 166, 90);
+    margin-left: 50px;
+    font-size: 2rem;
+}
+.contenido-slider p{
+    font-size: 14pt;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+.contenido-slider a{
+    background-color: rgb(242, 166, 90);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+}
+.contenido-slider a:hover{
+    background-color: rgb(11, 58, 66);
+}
+#caja1{
+    background-image: linear-gradient(135deg, rgba(11, 58, 66, 0.589), rgba(20, 101, 117, 0.5)), url(../img/banner-1.png);
+    background-size: cover;
+    background-position: center;
+}
+#caja2{
+    background-image: linear-gradient(135deg, rgba(11,58,66,.93), rgba(20,101,117,.88)), url(../img/banner-2.png);
+    background-size: cover;
+    background-position: center;
+}
+#caja3{
+    background-image: linear-gradient(135deg, rgba(11,58,66,.93), rgba(20,101,117,.88)), url(../img/banner-3.png);
+    background-size: cover;
+    background-position: center;
+}
