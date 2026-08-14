@@ -32,10 +32,10 @@
     margin: 0;              /* Elimina márgenes por defecto de los párrafos */
     font-size: 0.9rem;      /* Ajusta el tamaño si deseas que quede más estilizado */
 }
-#redes{
-    width: 30%; 
+#redes {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    gap: 20px;
 }
 #redes span{
     color: #ccc;
@@ -49,19 +49,16 @@
 #cabecera {
     grid-area: menu;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* CLAVE: Logo totalmente a la izq, Menú a la der */
     align-items: center;
-    padding: 10px 40px;
+    padding: 0 40px;                /* Espaciado para que no toque los bordes de la pantalla */
+    height: 80px;                   /* Altura fija para que respire bien */
     background-color: #ffffff;
-    position: relative;
-    z-index: 100;
 }
 .logo {
-    width: 140px;          /* Ancho adecuado para que resalte */
+    width: 120px;       /* Tamaño ideal para el logo */
     height: auto;
     display: block;
-    position: relative;
-    z-index: 101;          /* Nos aseguramos de que nada lo tape */
 }
 #check:checked ~.menu{
     left: 0;
@@ -78,62 +75,40 @@
 .icon-menu:hover{
     color: rgb(11, 58, 66);
 }
-.menu{
-
-    width: 100%;
-
-    height: auto;
-
+.menu {
+    position: static;
+    left: 0;
     display: flex;
-
-    flex-wrap: wrap;
-
-    position: absolute;
-
-    top: 70px;
-
-    left:-100%;
-
-    background-color: rgba(11,58,66, .96);
-
-    transition: 1s ease;
-
-    z-index: 12;
-
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;         /* Ocupa solo el espacio de los enlaces */
+    height: auto;
+    margin: 0;           /* Quita márgenes invisibles que puedan desplazarlo */
+    padding: 0;
 }
 
-.menu li{
-
-    width: 100%;
-
-    border-bottom:1px solid rgba(255, 255, 255, .2);
-
+.menu li {
+    width: auto;                  /* Corregido: ya no ocupa el 100% */
+    border-bottom: none;          /* Corregido: quita la línea divisoria */
     list-style: none;
-
 }
 
-.menu li a{
-
+.menu li a {
     text-decoration: none;
-
     display: block;
-
-    line-height: 9.5;
-
+    line-height: normal;          /* Corregido: anula el 9.5 */
+    padding: 10px 18px;          /* Añadido: espacio interno del botón */
     text-align: center;
-
-    font-size: 1.1rem;
-
-    color: white;
-
+    font-size: 1rem;              /* Ajustado para encajar mejor */
+    color: #0b3a42;               /* Corregido: color oscuro visible en fondo blanco */
     font-weight: bold;
-
-    letter-spacing: 1px;
-
+    letter-spacing: 0.5px;
 }
-.menu li a.active,li a:hover{
+
+.menu li a.active, .menu li a:hover {
     background-color: rgb(20, 101, 117);
     color: white;
+    border-radius: 4px;           /* Redondea los bordes al pasar el mouse */
 }
 #banner{
     grid-area: banner;
