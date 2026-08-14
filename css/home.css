@@ -13,18 +13,24 @@
     "teem" auto
     "pie" auto/1fr;
 }
-#datos{
+#datos {
     grid-area: redes;
     background-color: rgb(11, 58, 66);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Empuja #dir a la izquierda y #redes a la derecha */
     align-items: center;
+    padding: 0 30px;                /* Da un margen interno en los bordes */
 }
-#dir{
-    width: 60%;
+
+#dir {
+    display: flex;          /* Coloca los <p> en una sola línea horizontal */
+    gap: 20px;              /* Espacio entre la dirección y el teléfono */
 }
-#dir p{
+
+#dir p {
     color: #ccc;
+    margin: 0;              /* Elimina márgenes por defecto de los párrafos */
+    font-size: 0.9rem;      /* Ajusta el tamaño si deseas que quede más estilizado */
 }
 #redes{
     width: 30%; 
