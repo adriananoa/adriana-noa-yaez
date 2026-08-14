@@ -62,6 +62,23 @@
     padding: 0 30px !important;
     box-sizing: border-box !important;
 }
+.enlace {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio de separación entre el logo y la frase */
+    text-decoration: none; /* Quita el subrayado de enlace si llegara a aparecer */
+}
+
+/* 2. Estilo elegante para el eslogan */
+.eslogan {
+    color: #0b3a42;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-style: italic;
+    border-left: 2px solid rgb(20, 101, 117); /* Línea vertical separadora */
+    padding-left: 15px; /* Espacio entre la línea y el texto */
+    white-space: nowrap; /* Evita que el texto se parta en 2 líneas */
+}
 
 /* Logo liberado y pegado a la izquierda */
 .logo {
