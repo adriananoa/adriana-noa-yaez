@@ -23,9 +23,13 @@
     text-decoration: none;
     color: white;
 }
-#copy{
-    margin-top: 100px;
+#copy {
+    width: 100%;        
+    text-align: center; 
+    margin-top: 40px;   
+    padding: 20px 0;   
 }
-#copy p{
+
+#copy p {
     color: white;
 }
