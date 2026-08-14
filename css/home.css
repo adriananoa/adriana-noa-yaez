@@ -14,66 +14,71 @@
     "pie" auto/1fr;
 }
 #datos {
-    position: relative !important;
-    z-index: 10 !important;
-    height: 50px !important;
+    grid-area: redes;
+    background-color: rgb(11, 58, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 }
 
 #dir {
-    display: flex;          /* Coloca los <p> en una sola línea horizontal */
-    gap: 20px;              /* Espacio entre la dirección y el teléfono */
+    display: flex;
+    gap: 20px;
 }
 
 #dir p {
     color: #ccc;
-    margin: 0;              /* Elimina márgenes por defecto de los párrafos */
-    font-size: 0.9rem;      /* Ajusta el tamaño si deseas que quede más estilizado */
+    margin: 0;
+    font-size: 0.9rem;
 }
+
 #redes {
+    width: 30%; 
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: space-evenly;
 }
-#redes span{
+
+#redes span {
     color: #ccc;
     font-size: 1.3rem;
     cursor: pointer;
 }
-#redes span:hover{
+
+#redes span:hover {
     filter: drop-shadow(0 0 10px #f2a65a) drop-shadow(0 0 20px #f2a65a);
     color: rgb(242, 166, 90);
 }
+
 #cabecera {
-    position: relative !important; /* QUITA la posición absolute que la sube */
-    top: 0 !important;             /* Cancela cualquier desvíos hacia arriba */
-    margin-top: 0 !important;      /* Elimina márgenes negativos */
-    width: 100% !important;
-    height: 80px !important;
-    background-color: #ffffff !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 0 40px !important;
-    box-sizing: border-box !important;
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .logo {
-    width: 120px;       /* Tamaño ideal para el logo */
+    width: 120px;
     height: auto;
     display: block;
 }
-#check:checked ~.menu{
+
+#check:checked ~.menu {
     left: 0;
 }
-#check{
+
+#check {
     display: none;
 }
-.icon-menu{
+
+.icon-menu {
     color: rgb(20, 101, 117);
     font-size: 2rem;
     margin-right: 10px;
     cursor: pointer;
 }
-.icon-menu:hover{
+
+.icon-menu:hover {
     color: rgb(11, 58, 66);
 }
 .menu {
