@@ -36,9 +36,10 @@
 }
 
 #redes {
-    width: 30%; 
+    width: auto; /* Permite que el contenedor se ajuste a los íconos */
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px; /* Define un espacio uniforme entre cada ícono */
+    margin-left: auto; /* Esta es la magia: empuja todo el bloque hacia la extrema derecha */
 }
 
 #redes span {
