@@ -144,12 +144,12 @@
     background-position: center;
 }
 #caja2{
-    background-image: linear-gradient(135deg, rgba(11,58,66,.93), rgba(20,101,117,.88)), url(../img/banner-2.png);
+    background-image: linear-gradient(135deg, rgba(11, 58, 66, 0.589), rgba(20, 101, 117, 0.5)), url(../img/banner-2.png);
     background-size: cover;
     background-position: center;
 }
 #caja3{
-    background-image: linear-gradient(135deg, rgba(11,58,66,.93), rgba(20,101,117,.88)), url(../img/banner-3.png);
+    background-image: linear-gradient(135deg, rgba(11, 58, 66, 0.589), rgba(20, 101, 117, 0.5)), url(../img/banner-3.png);
     background-size: cover;
     background-position: center;
 }
