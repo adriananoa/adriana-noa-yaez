@@ -49,11 +49,13 @@
 #cabecera {
     grid-area: menu;
     display: flex;
-    justify-content: space-between; /* CLAVE: Logo totalmente a la izq, Menú a la der */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 40px;                /* Espaciado para que no toque los bordes de la pantalla */
-    height: 80px;                   /* Altura fija para que respire bien */
+    padding: 0 40px;
+    height: 80px;
     background-color: #ffffff;
+    width: 100%;             /* Garantiza que ocupe todo el ancho de la rejilla */
+    box-sizing: border-box;  /* Evita que el padding deforme el ancho total */
 }
 .logo {
     width: 120px;       /* Tamaño ideal para el logo */
