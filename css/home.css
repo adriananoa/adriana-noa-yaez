@@ -14,12 +14,9 @@
     "pie" auto/1fr;
 }
 #datos {
-    grid-area: redes;
-    background-color: rgb(11, 58, 66);
-    display: flex;
-    justify-content: space-between; /* Empuja #dir a la izquierda y #redes a la derecha */
-    align-items: center;
-    padding: 0 30px;                /* Da un margen interno en los bordes */
+    position: relative !important;
+    z-index: 10 !important;
+    height: 50px !important;
 }
 
 #dir {
@@ -47,19 +44,17 @@
     color: rgb(242, 166, 90);
 }
 #cabecera {
-    grid-area: menu;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    height: 80px;
-    background-color: #ffffff;
-    width: 100%;
-    
-    /* ESTAS PROPIEDADES CORRIGEN EL SOLAPAMIENTO: */
-    position: relative;     /* Cambia 'absolute' o 'fixed' por 'relative' */
-    top: 0;                 /* Asegura que no se suba a la barra verde */
-    margin-top: 0;          /* Elimina cualquier margen negativo que la empuje hacia arriba */
+    position: relative !important; /* QUITA la posición absolute que la sube */
+    top: 0 !important;             /* Cancela cualquier desvíos hacia arriba */
+    margin-top: 0 !important;      /* Elimina márgenes negativos */
+    width: 100% !important;
+    height: 80px !important;
+    background-color: #ffffff !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 40px !important;
+    box-sizing: border-box !important;
 }
 .logo {
     width: 120px;       /* Tamaño ideal para el logo */
@@ -82,15 +77,12 @@
     color: rgb(11, 58, 66);
 }
 .menu {
-    position: static;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-    width: auto;         /* Ocupa solo el espacio de los enlaces */
-    height: auto;
-    margin: 0;           /* Quita márgenes invisibles que puedan desplazarlo */
-    padding: 0;
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
 }
 
 .menu li {
